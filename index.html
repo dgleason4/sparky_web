@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" manifest="sparky.appcache">
+<head>
+  <meta charset="utf-8"/>
+	<title itemprop="name">sparky</title>
+	<meta name="description" content="Electrical and Electronic Tools and Calculators"/>
+	<meta name="author" content="David Gleason"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta content="www.sparky.comule.com/apple-touch-icon.png"/>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+	<link rel="stylesheet" href="sparky.css"/>
+</head>
+<body>
+	<div itemscope itemtype="http://schema.org/SoftwareApplication" class="flex vert center">
+		<header class="flex horiz">
+			<img itemprop="image" src="header.png"/>
+			<div>
+				<h1 itemprop="name">Sparky</h1>
+				<p itemprop="description" class="mobileNoShow">electrical and electronic tools and calculators</p>
+			</div>
+		</header>
+		<div id="google-ads-1" class="flex center">
+
+		</div>
+		<div class="flex vert0">
+			<div class="flex horiz0">
+				<div class="flex center item">
+					<section id="sizeAmp">
+						<table>
+							<tr>
+								<th colspan="2"><h2>Wire Size</h2><p>and Amperage</p></th>
+							</tr>
+							<tr>
+								<th colspan="2">
+									<input type="radio" name="saType" id="saCU"/><label>copper</label>
+									<input type="radio" name="saType" id="saAU"/><label>aluminum</label>
+								</th>
+							</tr>
+							<tr>
+								<td>gauge:</td>
+								<td>
+									<select id="saSize">
+										<option value="0">Choose wire size...</option> 
+										<option value="1">#14</option>
+										<option value="2">#12</option> 
+										<option value="3">#10</option> 
+										<option value="4">#8</option>
+										<option value="5">#6</option>
+										<option value="6">#4</option> 
+										<option value="7">#3</option>
+										<option value="8">#2</option>
+										<option value="9">#1</option> 
+										<option value="10">1/0</option>
+										<option value="11">2/0</option>
+										<option value="12">3/0</option>
+										<option value="13">4/0</option> 
+										<option value="14">250 kcmil</option>
+										<option value="15">300 kcmil</option>
+										<option value="16">350 kcmil</option>
+										<option value="17">500 kcmil</option>
+										<option value="18">750 kcmil</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>amps:</td>
+								<td><input type="number" id="saAmps"/></td>
+							</tr>
+						</table>						
+						<button id="saCalc" class="button">Calculate</button>
+						<button id="saClear" class="button reset">Reset</button>
+					</section>
+				</div>
+				<div class="flex center item">
+					<section id="ohmsLaw">
+						<table>
+							<tr>
+								<th colspan="2"><h2>Ohms Law</h2><p>Calculator</p></th>
+							</tr>
+							<tr>
+								<td>amps:</td>
+								<td><input type="number" id="olAmps"/></td>
+							</tr>
+							<tr>
+								<td>watts:</td>
+								<td><input type="number" id="olWatts"/></td>
+							</tr>
+							<tr>
+								<td>volts:</td>
+								<td><input type="number" id="olVolts"/></td>
+							</tr>
+							<tr>
+								<td>ohms:</td>
+								<td><input type="number" id="olOhms"/></td>
+							</tr>
+						</table>
+						<button id="olCalc" class="button">Calculate</button>
+						<button id="olClear" class="button reset">Reset</button>
+					</section>
+				</div>
+				<div class="flex center item">
+					<section id="conFill">
+						<table>
+							<tr>
+								<th colspan="2"><h2>Conduit Fill</h2><p>Calculator</p></th>
+							</tr>
+							<tr>
+								<td>conduit:</td>
+								<td>
+									<select id="cfConSize"> 
+										<option value="0">Choose pipe size...</option> 
+										<option value="1">1/2 in</option> <option value="2">3/4 in</option> 
+										<option value="3">1 in</option> <option value="4">1 1/4 in</option> 
+										<option value="5">1 1/2 in</option> <option value="6">2 in</option> 
+										<option value="7">2 1/2 in</option> <option value="8">3 in</option> 
+										<option value="9">3 1/2 in</option> <option value="10">4 in</option> 
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>gauge:</td>
+								<td>
+									<select id="cfWireSize">
+										<option value="0">Choose wire size...</option> 
+										<option value="1">#14</option> 
+										<option value="2">#12</option> 
+										<option value="3">#10</option>
+										<option value="4">#8</option> 
+										<option value="5">#6</option> 
+										<option value="6">#4</option>
+										<option value="7">#3</option> 
+										<option value="8">#2</option> 
+										<option value="9">#1</option>
+										<option value="10">1/0</option>
+										<option value="11">2/0</option> 
+										<option value="12">3/0</option> 
+										<option value="13">4/0</option> 
+										<option value="14">250 kcmil</option> 
+										<option value="15">300 kcmil</option> 
+										<option value="16">350 kcmil</option> 
+										<option value="17">500 kcmil</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td># of wires:</td>
+								<td><input type="number" id="cfWireNum"/></td>
+							</tr>
+						</table>
+						<button id="cfCalc" class="button">Calculate</button>
+						<button id="cfClear" class="button reset">Reset</button>
+					</section>
+				</div>
+
+			</div>
+			<div class="flex horiz0">
+				<div class="flex center item">
+					<section id="decibels">
+						<table>
+							<tr>
+								<th colspan="2"><h2>Decibel</h2><p>Converter</p></th>
+							</tr>
+							<tr>
+								<td>decibels:</td>
+								<td><input type="number" id="dbDecibels"/></td>
+							</tr>
+							<tr>
+								<td>watts:</td>
+								<td><input type="number" id="dbWatts"/></td>
+							</tr>
+						</table>
+						<button id="dbCalc" class="button">Calculate</button>
+						<button id="dbClear" class="button reset">Reset</button>
+					</section>
+				</div>
+				<div class="flex center item">
+					<section id="resistor">
+						<table>
+							<tr>
+								<th colspan="3"><h2>Resistor</h2><p>Colors</p></th>
+							</tr>
+							<tr>
+								<td>1st band:</td> 
+								<td colspan="2">
+									<select id="rsOne">
+										<option value="0">Black</option> 
+										<option value="1">Brown</option>
+										<option value="2">Red</option> 
+										<option value="3">Orange</option>
+										<option value="4">Yellow</option> 
+										<option value="5">Green</option>
+										<option value="6">Blue</option> 
+										<option value="7">Purple</option>
+										<option value="8">Gray</option> 
+										<option value="9">White</option>
+									</select>
+								</td>
+							</tr> 
+							<tr>
+								<td>2nd band:</td>
+								<td colspan="2">
+									<select id="rsTwo">
+										<option value="0">Black</option> 
+										<option value="1">Brown</option>
+										<option value="2">Red</option> 
+										<option value="3">Orange</option>
+										<option value="4">Yellow</option> 
+										<option value="5">Green</option>
+										<option value="6">Blue</option> 
+										<option value="7">Purple</option>
+										<option value="8">Gray</option> 
+										<option value="9">White</option>
+									</select>
+								</td>
+							</tr> 
+							<tr> 
+								<td>3rd band:</td>
+								<td colspan="2">
+									<select id="rsThree">
+										<option value="0">Silver</option> 
+										<option value="1">Gold</option>
+										<option value="2">Black</option> 
+										<option value="3">Brown</option>
+										<option value="4">Red</option> 
+										<option value="5">Orange</option>
+										<option value="6">Yellow</option> 
+										<option value="7">Green</option>
+										<option value="8">Blue</option> 
+										<option value="9">Purple</option>
+									</select>
+								</td>	
+							</tr> 
+							<tr> 
+								<td>4th band:</td> 
+								<td colspan="2">
+									<select id="rsFour">
+										<option value="0">Silver</option> 
+										<option value="1">Gold</option>
+										<option value="2">Brown</option> 
+										<option value="3">Red</option>
+										<option value="4">Green</option> 
+										<option value="5">Blue</option>
+										<option value="6">Purple</option> 
+									</select>
+								</td>
+							</tr>
+							<tr> 
+								<td>5th band:</td>
+								<td colspan="2">
+									<select id="rsFive">
+										<option value="0">None</option>
+										<option value="1">Silver</option> 
+										<option value="2">Gold</option> 
+										<option value="3">Brown</option>
+										<option value="4">Red</option> 
+										<option value="5">Green</option>
+										<option value="6">Blue</option>
+										<option value="7">Puple</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>6th band:</td>
+								<td colspan="2">
+									<select id="rsSix">
+										<option value="0">None</option>
+										<option value="1">Brown</option>
+										<option value="2">Red</option>
+										<option value="3">Orange</option>
+										<option value="4">Yellow</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						<button id="rsCalc" class="button">Calculate</button>
+						<button id="rsClear" class="button reset">Reset</button>
+						<h3 id="rsAnswer"></h3>
+					</section>
+				</div>
+				<div class="flex center item">
+					<section id="conBend">
+						<table>
+							<tr>
+								<th colspan="2"><h2>Conduit</h2><p>Bends</p></th>
+							</tr>
+							<tr>
+								<td>degree:</td>
+								<td>
+									<select id="cbDegree">
+										<option value="0">10 degrees</option> 
+										<option value="1">22 degrees</option>
+										<option value="2">30 degrees</option> 
+										<option value="3">45 degrees</option>
+										<option value="4">60 degrees</option> 
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>offset:</td>
+								<td><input type="number" id="cbOffset"/></td>
+							</tr>
+							<tr>
+								<td>length:</td>
+								<td id="cbLength"></td>
+							</tr>
+						</table>
+						<button id="cbCalc" class="button">Calculate</button>
+						<button id="cbClear" class="button reset">Reset</button>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="flex vert0">
+			<div class="flex horiz0">
+				<div class="flex center item">
+					<section id="copperPrice">
+						<h1 class="flex horiz center">Copper</h1>
+						<h3 class="flex horiz center">Prices</h3>
+						<table width=180 border=0 cellspacing=0 cellpadding=0 bgcolor=#ddd>
+							<tr>
+								<td>
+									<a href="http://www.kitcometals.com/connecting.html">
+										<img SRC="http://www.kitconet.com/charts/metals/base/copper-d.gif" border="0" alt="[Most Recent Quotes from www.kitco.com]">
+									</a>
+								</td>
+							</tr>
+						</table>
+					</section>
+				</div>
+				<div class="flex center item">
+					<section id="aluminumPrice">
+						<h1 class="flex horiz center">Aluminum</h1>
+						<h3 class="flex horiz center">Prices</h3>
+						<table width=180 border=0 cellspacing=0 cellpadding=0 bgcolor=#FFFFFF>
+							<tr>
+								<td>
+									<A HREF="http://www.kitcometals.com/connecting.html">
+										<IMG SRC="http://www.kitconet.com/charts/metals/base/aluminum-d.gif" BORDER="0" ALT="[Most Recent Quotes from www.kitco.com]">
+									</A>
+								</td>
+							</tr>
+						</table>
+					</section>
+				</div>
+				<div class="flex vert center item">
+					<h1 class="flex horiz center">Coming</h1>
+					<h3 class="flex horiz center">Soon</h3>
+				</div>
+			</div>
+			<div class="flex horiz0">
+				<div class="flex vert center item">
+					<h1 class="flex horiz center">Coming</h1>
+					<h3 class="flex horiz center">Soon</h3>
+				</div>
+				<div class="flex vert center item">
+					<h1 class="flex horiz center">Coming</h1>
+					<h3 class="flex horiz center">Soon</h3>
+				</div>
+				<div class="flex center item">
+					<p style="padding-top:140px">copyright &copy; 2013 &nbsp;</p>
+					<p style="padding-top:140px">
+						<a href="https://plus.google.com/105951819797613930089?rel=author"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">David Gleason</span></span></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="sparky.js"></script>
+
+</body>
+</html>
